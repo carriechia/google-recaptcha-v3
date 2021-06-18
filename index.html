@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Google recaptcha v3 demo</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <h1>Google reCAPTCHA Demo</h1>
+    <form id="demo-form" action="" method="post">
+      <input type="email" name="email" placeholder="Type your email" size="40"><br><br>
+      <input type="password" name="password" placeholder="Type your password" size="40"><br><br>
+        <button class="g-recaptcha"
+            data-sitekey="key"
+            data-callback='verifyCallback'
+            data-action='submit'>Submit</button>
+    </form>
+    <script>
+        function verifyCallback(token) {
+            console.log(token)
+        }
+    </script>
+  </body>
+</html>
